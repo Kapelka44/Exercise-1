@@ -14,17 +14,12 @@ public class Comparison2 {
     }
 
     private static void bubbleSort(int[] number) {
-        int i;
-        boolean flag = true;
-        int stop;
-        while (flag) {
-            flag = false;
-            for (i = 0; i < number.length - 1; i++) {
-                if (number[i] > number[i + 1]) {
-                    stop = number[i];
-                    number[i] = number[i + 1];
-                    number[i + 1] = stop;
-                    flag = true;
+        for(int i = number.length-1 ; i > 0 ; i--){
+            for(int j = 0 ; j < i ; j++){
+                if( number[j] > number[j+1] ){
+                    int tmp = number[j];
+                    number[j] = number[j+1];
+                    number[j+1] = tmp;
                 }
             }
         }
